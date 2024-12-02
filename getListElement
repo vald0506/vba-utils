@@ -1,0 +1,14 @@
+# get list element, otherwise NA
+getListElement <- function(list, element) {
+  
+  if(is.numeric(element) & element > length(list)) {
+    # if number > length --> NA
+    return(NA)
+  } else if(is.null(list[[element]])) {
+    # if name not present --> NA
+    return(NA)
+  } else {
+    return(list[[element]])
+  }
+  
+}
